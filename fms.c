@@ -30,6 +30,7 @@ int compareFileItemsByDate(const void *a, const void *b)
     return strcmp(fileA->date, fileB->date);
 }
 
+// Function to display files
 void displayFiles(struct FileItem files[], int count) 
 {
     if (count == 0) 
@@ -45,9 +46,9 @@ void displayFiles(struct FileItem files[], int count)
     }
 }
 
+// Function to validate the date format of "YYYY-MM-DD"
 bool isValidDateFormat(const char *date) 
 {
-    // Validate if the date has the format "YYYY-MM-DD"
     if (strlen(date) != 10)
         return false;
     if (date[4] != '-' || date[7] != '-')
